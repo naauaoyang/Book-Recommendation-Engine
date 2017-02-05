@@ -1,0 +1,1 @@
+The data is saved separately as testresult_1.csv.zip, which is too large to be contacted in the data folder. It contains 3 columns. The first column is the user id, the second conlumn is the book id and the third column is the rating.

@@ -1,0 +1,58 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+  <title>Amazon Book Recommendation Engine</title>
+  <meta charset="UTF-8">
+  <meta name="description" content="A web application for E6893 big data project" />
+  <meta name="keywords" content="Amazon Book Recommendation" />
+  <meta http-equiv="content-type" content="text/html; charset=windows-1252" />
+  <link rel=stylesheet type=text/css href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+  <div id="main">
+    <div id="header">
+      <div id="logo">
+        <div id="logo_text">
+          <!-- class="logo_colour", allows you to change the colour of the text -->
+          <h1><a href="index">Your Book <span class="logo_colour">Recommender</span></a></h1>
+          <h2>Close to your inner conner.</h2>
+        </div>
+      </div>
+      <div id="menubar">
+        <ul id="menu">
+          <!-- put class="selected" in the li tag for the selected page - to highlight which page you're on -->
+          <li class="selected"><a href="index">Home</a></li>
+          <li><a href="showsignin">Sign In</a></li>
+          <li><a href="showaboutus">About Us</a></li>
+        </ul>
+      </div>
+    </div>
+    <div id="site_content">
+      <div class="sidebar">
+      </div>
+    <div id="content">
+        <!-- insert the page content here -->
+        <h1><b>This Website is Designed for Columbia E6893 Big Data Analytics</b></h1>
+        <h1>Introduction To Our Project</h1>
+        <p>In our project, we build a recommendation system based on Mahout and Spark realizing three kinds of recommendation. The first one is recommending new books to to customers. This includes recommending books to the existing users based on their tastes and recommending reading list to new users based on books’ popularity. The second one is recommending friends to users based on their similarity. The third one is recommending potential useful reviews to users. Finally we use System G and build a Flask web application to visualize our findings.</p>
+        <p>This website is designed based on python Flask and the engine can recommend books and similar users for existing Amazon users and new users.</p>
+        <h1>How to Recommend</h1>
+        <p>Click "Sign In" in the menubar, and then enter your Amazon user Id. Click "Start!" Button. You will get your special Amazon recommendation.</p>
+        <h1><b>Browser Compatibility</b></h1>
+        <p>This website has been tested in the following browsers:</p>
+        <ul>
+          <li>Internet Explorer 8</li>
+          <li>Internet Explorer 7</li>
+          <li>FireFox 3.5</li>
+          <li>Google Chrome 6</li>
+        </ul>
+      </div>
+    </div>
+    <div id="footer">
+      Copyright &copy; Huashu Li, Yunfan Zhang, Zhuangfei Yang | HTML template from <a href="http://www.html5webtemplates.co.uk">Free CSS Templates</a>
+    </div>
+  </div>
+  </body>
+</html>

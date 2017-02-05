@@ -1,0 +1,49 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+  <title>Amazon Book Recommendation Engine</title>
+  <meta charset="UTF-8">
+  <meta name="description" content="A web application for E6893 big data project" />
+  <meta name="keywords" content="Amazon Book Recommendation" />
+  <meta http-equiv="content-type" content="text/html; charset=windows-1252" />
+  <link rel=stylesheet type=text/css href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+  <div id="main">
+    <div id="header">
+      <div id="logo">
+        <div id="logo_text">
+          <!-- class="logo_colour", allows you to change the colour of the text -->
+          <h1><a href="index">Your Book <span class="logo_colour">Recommender</span></a></h1>
+          <h2>Close to your inner conner.</h2>
+        </div>
+      </div>
+      <div id="menubar">
+        <ul id="menu">
+          <!-- put class="selected" in the li tag for the selected page - to highlight which page you're on -->
+          <li><a href="index">Home</a></li>
+          <li><a href="showsignin">Sign In</a></li>
+          <li class="selected"><a href="showaboutus">About Us</a></li>
+        </ul>
+      </div>
+    </div>
+    <div id="site_content">
+      <div class="sidebar">
+      </div>
+      <div id="content">
+        <h1>About Us</h1>
+        <p>We are a team from Operations Research program, enthusiastic about creating data-driven applications, embracing innovation and creativity. We hope to learn from people who have the same interest with us. If you have any idea or would like to communicate with us, please contact us as following.</p>
+        
+        <h1>Contact Us</h1>
+        <p>If you have questions, please send emails to <a href="mailto:fayezhang9@gmail.com" target="_top">fayezhang9@gmail.com</a></p>
+        
+      </div>
+    </div>
+    <div id="footer">
+      Copyright &copy; Huashu Li, Yunfan Zhang, Zhuangfei Yang | HTML template from <a href="http://www.html5webtemplates.co.uk">Free CSS Templates</a>
+    </div>
+  </div>
+  </body>
+</html>

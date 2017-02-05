@@ -1,0 +1,87 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+  <title>Amazon Book Recommendation Engine</title>
+  <meta charset="UTF-8">
+  <meta name="description" content="A web application for E6893 big data project" />
+  <meta name="keywords" content="Amazon Book Recommendation" />
+  <meta http-equiv="content-type" content="text/html; charset=windows-1252" />
+  <link rel=stylesheet type=text/css href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <div id="main">
+    <div id="header">
+      <div id="logo">
+        <div id="logo_text">
+          <!-- class="logo_colour", allows you to change the colour of the text -->
+          <h1><a href="index">Your Book <span class="logo_colour">Recommender</span></a></h1>
+          <h2>Close to your inner conner.</h2>
+        </div>
+      </div>
+      <div id="menubar">
+        <ul id="menu">
+          <!-- put class="selected" in the li tag for the selected page - to highlight which page you're on -->
+          <li><a href="index">Home</a></li>
+          <li class="selected"><a href="showsignin">Sign In</a></li>
+          <li><a href="showaboutus">About Us</a></li>
+        </ul>
+      </div>
+    </div>
+    <div id="site_content">
+      <div class="sidebar">
+      </div>
+      <div id="content">
+        <h2 align="center" style="font-family:'century gothic';color:#000000"><b>Your Special Recommendation!</b></h2>
+          <form>
+            <div class="container" id="container">
+              <table style="width:100%; border-spacing:0;font-family: 'century gothic';color: #47433F;">
+                <thead>
+                  <tr>
+                    <th> </th>
+                    <th>Book</th>
+                    <th>Predicted Rating</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {% for key in records[0] %}
+                    <tr>
+                      <td> <img src={{records[0][key]['bookImage']}} width="230" height="350"> </td>
+                      <td> <a href = {{records[0][key]['bookLink']}} style="color: #47433F;"> {{key}} </a> <br></td>
+                      <td>{{records[0][key]['bookRating']}} <br></td>
+                    </tr>
+                  {% endfor %}
+                </tbody>
+
+              </table>
+              <table style="width:100%; border-spacing:0;font-family: 'century gothic';color: #47433F;">
+                <thead>
+                  <tr>
+                    <th> </th>
+                    <th>Similar User</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {% for key1 in records[1] %}
+                    <tr>
+                      <td><img src={{records[1][key1]['userImage']}} width="230" height="230"></td>
+                      <td> <a href = {{records[1][key1]['userLink']}} style="color: #47433F;"> {{key1}} </a> <br></td>
+                    </tr>
+                  {% endfor %}
+                </tbody>
+              </table>
+            </div>
+          </form>
+      </div>
+      <div id="footer">
+        Copyright &copy; Huashu Li, Yunfan Zhang, Zhuangfei Yang | HTML template from <a href="http://www.html5webtemplates.co.uk">Free CSS Templates</a>
+      </div>
+    </div>
+  </div>  
+</body>
+
+</html>
+
+
+
+
